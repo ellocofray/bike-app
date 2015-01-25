@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{APP_TITLE | translate}}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="bower_components/angular-material/themes/amber-theme.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body ng-controller="mainCtrl">
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!--<div ng-view></div>-->
+  <div layout="column" layout-fill>
+    <md-toolbar ng-hide="hideToolbar()">
+      <div class="md-toolbar-tools">
+
+        <md-button href="#/viewBicycle" class="md-button-colored">
+        {{'APP_TITLE' | translate}}
+        </md-button>
+
+
+        <!--<md-button ng-click="changeLanguage('de')">-->
+          <!--{{"BUTTON_LANG_DE" | translate}}-->
+        <!--</md-button>-->
+        <!--<md-button ng-click="changeLanguage('en')">-->
+          <!--{{"BUTTON_LANG_EN" | translate}}-->
+        <!--</md-button>-->
+        <!--<md-button ng-click="changeLanguage('cz')">-->
+          <!--{{"BUTTON_LANG_CZ" | translate}}-->
+        <!--</md-button>-->
+
+
+        <!-- fill up the space between left and right area -->
+
+        <span flex></span>
+        <md-button ng-click="goTo('/viewSkeleton')">
+          {{'NAV_SKELETON' | translate}}
+        </md-button>
+        <md-button ng-click="goTo('/viewReport')">
+          {{'NAV_REPORT' | translate}}
+        </md-button>
+        <md-button ng-click="goTo('/viewSettings')">
+          {{'NAV_SETTINGS' | translate}}
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-content class="md-padding">
+      <div ng-view></div>
+    </md-content>
+  </div>
+
+  <!--<a class="pull-right-top-overlay" ng-click="showNav=!showNav">-->
+    <!--<span class="setting-nav-bars"></span>-->
+    <!--<span class="setting-nav-bars"></span>-->
+    <!--<span class="setting-nav-bars"></span>-->
+
+
+    <!--<div ng-show="showNav" style="margin-left: -80px;">-->
+
+      <!--<md-button ng-click="navigateTo('/viewSkeleton')">-->
+        <!--{{'NAV_SKELETON' | translate}}-->
+      <!--</md-button>-->
+      <!--<md-button ng-click="navigateTo('/viewReport')">-->
+        <!--{{'NAV_REPORT' | translate}}-->
+      <!--</md-button>-->
+      <!--<md-button ng-click="navigateTo('/viewSettings')">-->
+        <!--{{'NAV_SETTINGS' | translate}}-->
+      <!--</md-button>-->
+
+      <!--<md-button ng-click="changeLanguage('de')">-->
+        <!--{{"BUTTON_LANG_DE" | translate}}-->
+      <!--</md-button>-->
+      <!--<md-button ng-click="changeLanguage('en')">-->
+        <!--{{"BUTTON_LANG_EN" | translate}}-->
+      <!--</md-button>-->
+      <!--<md-button ng-click="changeLanguage('cz')">-->
+        <!--{{"BUTTON_LANG_CZ" | translate}}-->
+      <!--</md-button>-->
+    <!--</div>-->
+  <!--</a>-->
+
+
+
+  <!--<div>BikeApp: v<span app-version></span></div>-->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/underscore/underscore-min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/hammerjs/hammer.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+  <script src="bower_components/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+  <script src="bower_components/angular-svg-pan-zoom/dist/angular-svg-pan-zoom.min.js"></script>
+  <script src="bower_components/Snap.svg/dist/snap.svg-min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="viewSkeleton/viewSkeleton.js"></script>
+  <script src="viewSettings/viewSettings.js"></script>
+  <script src="viewReport/viewReport.js"></script>
+  <script src="viewBicycle/viewBicycle.js"></script>
+  <script src="viewCrank/viewCrank.js"></script>
+  <script src="viewFrame/viewFrame.js"></script>
+  <script src="viewInfo/viewInfo.js"></script>
+  <script src="viewSaddle/viewSaddle.js"></script>
+  <script src="viewWheel/viewWheel.js"></script>
+
+
+  <script src="components/cycling/cycling.js"></script>
+  <script src="components/cycling/BioMechanic.js"></script>
+
+  <script src="components/svgTranslate/svgTranslateDirective.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+
+</body>
+</html>

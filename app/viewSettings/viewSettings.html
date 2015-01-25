@@ -1,0 +1,52 @@
+<form style="padding: 20px;">
+
+  <form name="userForm">
+    <h2>{{settings.userInfo | translate}}</h2>
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>{{'user.FirstName' | translate}}</label>
+        <input ng-model="user.firstName">
+      </md-input-container>
+      <md-input-container flex>
+        <label>{{'user.Lastname' | translate}}</label>
+        <input ng-model="theMax">
+      </md-input-container>
+    </div>
+    <md-input-container flex>
+      <label>Address</label>
+      <input ng-model="user.address">
+    </md-input-container>
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>City</label>
+        <input ng-model="user.city">
+      </md-input-container>
+      <md-input-container flex>
+        <label>State</label>
+        <input ng-model="user.state">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Postal Code</label>
+        <input ng-model="user.postalCode">
+      </md-input-container>
+    </div>
+    <md-input-container flex>
+      <label>Biography</label>
+      <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
+    </md-input-container>
+
+    <h2>{{settings.userData | translate}}</h2>
+
+    <md-input-container flex>
+      <label>{{'user.FirstName' | translate}}</label>
+      <input ng-model="user.firstName">
+    </md-input-container>
+
+  <br/>
+  <md-button ng-click="compute()">
+    {{"BUTTON_REPORT"| translate}}
+  </md-button>
+
+</form>
+
+

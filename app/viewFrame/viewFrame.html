@@ -1,0 +1,91 @@
+<article>
+
+    <p>Stanovení správné geometrie rámu a stanovení správné polohy posedu na kole je jedním z nejdůležitějších faktorů
+        ovlivňující výkon a zdraví závodníka.
+        Získat optimalizovaný výsledek v podobě rámu a to přímo dle anatomických parametrů konkrétní osoby je však
+        poměrně složitá záležitost.</p>
+
+    <md-button href="#/viewSkeleton" class="md-button-colored">
+    {{'NAV_GEOMETRY' | translate}}
+    </md-button>
+
+
+    <h3>Materiály rámu:</h3>
+
+    <p>K výrobě rámů používá hliník, hořčík, scandium, karbon, ocel a zřídka i titan. V následující tabulce se vám
+        pokusíme
+        vysvětlit vlastnosti jednotlivých materiálu:</p>
+
+    <ul>
+        <li><b>Hliník</b> - výhodou rámů z hliníkových slitin je většinou nízká hmotnost a boční tuhost rámu. Nevýhodou
+            je
+            pak nízká či žádná pružnost a vyšší cena než u oceli. Výrazným prvkem napomáhajícím vlastnostem hliníkových
+            rámů
+            je profilace (tvarování) trubek. Hliníkové rámy nesou označení alu (případně s označením typu - 6061, 7005,
+            7020
+            ap.), allux, alloy, dural, easton, alutron atd.. Cena a váha těchto rámů je odlišná v závislosti na použití
+            různých druhů hliníkových slitin a technologií.
+        </li>
+        <li><b>Scandium</b> – hliníková slitina, s příměsí scandia. Díky této přísadě získává hliník vyšší pevnost a
+            pružnost a proto jsou tyto rámy daleko lehčí než klasické hliníkové.
+        </li>
+        <li><b>Hořčík</b> - hliníková slitina, s příměsí hořčíku / magnésia. Díky této přísadě získává hliník vyšší
+            pevnost
+            a pružnost a proto jsou tyto rámy daleko lehčí než klasické hliníkové. Hořčíkové rámy mají podobné
+            vlastnosti
+            jako rámy scandiové.
+        </li>
+        <li><b>Karbon</b> - vzniká kladením vrstev karbonové tkaniny a pojidla do speciálních forem a jejich spékáním
+            při
+            tlaku a vysátém vzduchu. Tento způsob výroby umožňuje přidávat a ubírat materiál na místech kde ho je nebo
+            naopak není potřeba. Tím se dociluje vysoké pevnosti a přitom extrémní lehkosti konstrukce. Díky zdokonalení
+            technologie výroby se tyto rámy staly momentálně nejlepším materiálem pro rámy jízdních kol.
+        </li>
+        <li><b>Ocel (Hi-Ten)</b> - výhodou ocelových rámů je jejich pružnost a nízká cena. Nevýhodou je jejich vyšší
+            hmotnost. Pro odstranění těchto nevýhod se často používají slitiny oceli jako např. Cr-Mo (zušlechtěná ocel
+            s
+            přísadou chromu a molybdenu) nebo slitiny např. Columbus. Díky tvrdosti slitiny je možné použít tenčí stěny
+            trubek a rám je proto lehčí. S kvalitou těchto slitin potom samozřejmě roste i jejich cena. Ocel se v
+            současné
+            době nejčastěji používa pro výrobu rámů BMX kol, které mají maximální nároky na výdrž a odolnost proti
+            nárazu /
+            pádu.
+        </li>
+    </ul>
+</article>
+<h3>Geometrie rámů - výrobci</h3>
+
+<article class="narrow">
+    <ul>
+        <li ng-repeat="item in items">
+            <a href="{{'viewFrame/pdf/' + item + '.pdf'}}">{{item}}</a>
+        </li>
+    </ul>
+</article>
+
+
+<!--<table class="result" style="display: none;">-->
+<!--<tr>-->
+<!--<td>{{frame.SeatTube | translate}}(RH)</td>-->
+<!--<td>{{result.SeatTube | emptyValue | number:2}}</td>-->
+<!--<td rowspan="8">-->
+<!--<img src="components/cycling/Rahmen.gif">-->
+<!--</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>{{frame.SeatHeight | translate}} (EH)</td>-->
+<!--<td>{{result.SeatHeight| emptyValue | number:2}}</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>{{frame.SaddlePedalSeatback | translate}} (ST)</td>-->
+<!--<td>{{result.SaddlePedalSeatback| emptyValue | number:2}}</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>{{frame.FlatHandlebars | translate}} (EL)</td>-->
+<!--<td>{{result.FlatHandlebars| emptyValue | number:2}}</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>{{frame.SaddleHandlebarDrop | translate}} (LT)</td>-->
+<!--<td>{{result.SaddleHandlebarDrop| emptyValue | number:2}}</td>-->
+<!--</tr>-->
+<!--</table>-->

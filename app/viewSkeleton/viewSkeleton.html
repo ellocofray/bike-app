@@ -1,0 +1,69 @@
+<!--<table style="width: 100%;height: 100%;">-->
+<!--<tr>-->
+<!--<td>-->
+<!--<div class="skeletonCont" svg-view template-url="viewBicycle/img/Human_skeleton_final.svg" svg-koty="koty"></div>-->
+<!--</td>-->
+<!--<td>-->
+<!--<div  class="frameCont" svg-view template-url="viewBicycle/img/Frame.svg">-->
+<!--</div>-->
+<!--<div>-->
+<!--<md-slider flex ng-model="current.value" min="{{current.min}}" max="{{current.max}}" aria-label="blue"-->
+<!--id="blue-slider">-->
+<!--</md-slider>-->
+<!--</div>-->
+
+<!--</td>-->
+<!--</tr>-->
+<!--</table>-->
+
+<div class="skeletonCont" svg-view template-url="viewBicycle/img/Human_skeleton_final.svg" svg-koty="koty"></div>
+<div style="float: right;width:50%;">
+    <div class="frameCont" svg-view template-url="viewBicycle/img/Frame.svg">
+    </div>
+    <div style="margin: 10px;">
+        <h3>{{ current.label | translate }} (cm) : {{current.value | number:2}} </h3>
+        <md-slider flex ng-model="current.value" min="{{current.min}}" max="{{current.max}}" aria-label="blue"
+                   id="blue-slider">
+        </md-slider>
+        <div translate="{{current.help}}"></div>
+    </div>
+</div>
+<!--<div class="leftColumn">-->
+<!--<div class="skeletonCont" svg-view template-url="viewBicycle/img/Human_skeleton_final.svg" svg-koty="koty"></div>-->
+<!--</div>-->
+
+<!--<div class="rightColumn">-->
+<!--&lt;!&ndash;<table class="result">&ndash;&gt;-->
+<!--&lt;!&ndash;<tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{frame.SeatTube | translate}}(RH)</td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{result.SeatTube | emptyValue | number:2}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td rowspan="8">&ndash;&gt;-->
+<!--&lt;!&ndash;&ndash;&gt;-->
+<!--&lt;!&ndash;</td>&ndash;&gt;-->
+<!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{frame.SeatHeight | translate}} (EH)</td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{result.SeatHeight| emptyValue | number:2}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{frame.SaddlePedalSeatback | translate}} (ST)</td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{result.SaddlePedalSeatback| emptyValue | number:2}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{frame.FlatHandlebars | translate}} (EL)</td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{result.FlatHandlebars| emptyValue | number:2}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{frame.SaddleHandlebarDrop | translate}} (LT)</td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td>{{result.SaddleHandlebarDrop| emptyValue | number:2}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--&lt;!&ndash;</table>&ndash;&gt;-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--<md-button class="md-primary md-fab" ng-click="second=!second">-->
+<!--{{'NAV_NEXT' | translate}}-->
+<!--</md-button>-->
+<!--</div>-->
+
